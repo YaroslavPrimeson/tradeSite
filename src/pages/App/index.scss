@@ -1,0 +1,1323 @@
+@import "../../App";
+
+
+.test__mode__under__development {
+  text-align: center;
+
+}
+
+@media (max-width: 700px) {
+  .test__mode__under__development {
+    margin-top: 60px;
+
+  }
+}
+
+////////////////////////////////////////////////////////////////////
+// preloader
+////////////////////////////////////////////////////////////////////
+.body__container {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+.loader-bg {
+  position: fixed;
+  z-index: 999999;
+  background-color: $main-color-1;
+  width: 100%;
+  height: 100%;
+}
+
+.loader-p {
+  border: 0 solid transparent;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: calc(50vh - 75px);
+  left: calc(50vw - 75px);
+}
+
+.loader-p:before, .loader-p:after {
+  content: '';
+  border: 1em solid $main-color-2;
+  border-radius: 50%;
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: loader 2s linear infinite;
+  opacity: 0;
+}
+
+.loader-p:before {
+  animation-delay: 0.5s;
+}
+
+@keyframes loader {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+//
+//.load {
+//  height: 100vh;
+//  width: 100vw;
+//  background: black;
+//  position: absolute;
+//  z-index: 111;
+//  //overflow: hidden;
+//}
+//
+//#preload {
+//  height: 150px;
+//  width: 150px;
+//  border-radius: 50%;
+//  border: 20px solid #e5e5e5;
+//  animation: 3s pre linear infinite;
+//  position: fixed;
+//  top: 40%;
+//  right: 45%;
+//}
+//
+//@keyframes pre {
+//  0% {
+//    transform: rotate(0deg);
+//    border-top: 20px solid mediumseagreen;
+//  }
+//  100% {
+//    transform: rotate(360deg);
+//    border-top: 20px solid green;
+//  }
+//}
+
+////////////////////////////////////////////////////////////////////
+// Main Component
+////////////////////////////////////////////////////////////////////
+.main-component__container {
+  padding: 5vh;
+  //width: 65%;
+
+  font-family: $font-family-2;
+  font-weight: bolder;
+  color: $main-color-3;
+}
+
+@media (max-width: 1024px) {
+  .main-component__container {
+    //width:100%;
+  }
+}
+
+////////////////////////////////////////////////////////////////////
+// ACCORDION SELECT
+////////////////////////////////////////////////////////////////////
+.accordion__width {
+  width: 50%;
+}
+
+.card__container {
+  margin: 0 auto;
+  border-radius: 3rem;
+  //width: 98%;
+  background-color: $main-color-4;
+  border: 1px solid $main-color-3;
+}
+
+.card__header {
+  padding: 0;
+}
+
+.btn-link {
+  text-decoration: none;
+  width: 100%;
+  color: $main-color-3;
+  font-size: 25px;
+  border: 1px solid $main-color-3;
+}
+
+.btn-link:hover {
+  text-decoration: none;
+  box-shadow: 0 0 0 0.2rem rgb(0 0 0 / 55%);
+  color: $main-color-4;
+  background-color: $main-color-3;
+}
+
+.btn-link:focus {
+  box-shadow: none;
+  text-decoration: none !important;
+}
+
+.button__accordion {
+  background-color: $main-color-4;
+  color: $main-color-3;
+  border-radius: 0;
+  border: none;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  font-family: $font-family-1;
+}
+
+.button__accordion:hover {
+  background-color: $main-color-3;
+  color: $main-color-4;
+}
+
+.button__accordion:active {
+  background-color: $main-color-4;
+  color: $main-color-3;
+}
+
+.accordion-block__container {
+  border-top: 1px solid $main-color-3;
+  padding: 5vh;
+}
+
+.card-body {
+  padding: 0;
+}
+
+.inp__wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+@media (max-width: 1300px) {
+  .inp__wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.p__text {
+  text-align: left;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.form-radio-switch {
+  margin-top: -25px;
+}
+
+.accordion__input__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1vh;
+}
+
+.disabled__input {
+  opacity: 0.5;
+}
+
+////////////////////////////////////////////////////////////////////
+// ACCORDION OPERATION BLOCK
+////////////////////////////////////////////////////////////////////
+.accordion__operations-block {
+  width: 100%;
+  border-radius: 3rem;
+}
+
+.card__operations-block {
+  margin: 0 auto;
+  background-color: #000000;
+  border: 1px solid white;
+  //width: 90%;
+}
+
+.card__header {
+  padding: 0;
+}
+
+.operations__block__container {
+  max-height: 70vh;
+  overflow-y: scroll !important;
+  border-top: 1px solid $main-color-3;
+}
+
+@media(max-width: 700px) {
+  .operations__block__container {
+    max-height: 43vh;
+  }
+}
+
+.oper__block--container {
+  display: flex;
+  flex-direction: column;
+}
+
+.oper__block {
+  display: flex;
+  justify-content: center;
+  //padding-top: 10px;
+}
+
+.button__accordion {
+  background-color: black;
+  color: white;
+}
+
+.button__accordion:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.button__accordion:active {
+  background-color: black;
+  color: white;
+}
+
+////////////////////////////////////////////////////////////////////
+// ACCORDION OPERATION BLOCK
+////////////////////////////////////////////////////////////////////
+.operations__card__container {
+  //padding: 2vh;
+  padding: 1vh;
+  border-bottom: 1px solid $main-color-3;
+  position: relative;
+
+}
+
+.operations__card__header__container {
+  font-family: $font-family-1;
+  padding-left: 15px;
+}
+
+.operations__card__status__green {
+  border-radius: 50%;
+  border: 1px solid green;
+  //height: calc(5vw + 3vh);
+  //width: calc(5vw + 3vh);
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  top: 40px;
+  right: 5px;
+
+}
+
+
+.operations__card__status__red {
+  border-radius: 50%;
+  border: 1px solid darkred;
+  //height: calc(5vw + 3vh);
+  //width: calc(5vw + 3vh);
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  top: 40px;
+  right: 5px;
+}
+
+@media(max-width: 1200px) {
+  .operations__card__status__red, .operations__card__status__green {
+    top: 70px;
+  }
+}
+
+@media(max-width: 1000px) {
+  .operations__card__status__red, .operations__card__status__green {
+    position: inherit;
+  }
+}
+
+@media(max-width: 768px) {
+  .operations__card__status__red, .operations__card__status__green {
+    position: absolute;
+    top: 40px;
+  }
+}
+
+.operations__card__status__text {
+  font-family: $font-family-1;
+}
+
+////////////////////////////////////////////////////////////////////
+// BUTTONS BLOCK
+////////////////////////////////////////////////////////////////////
+.buttons__block {
+  //margin: 5vh 0;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  grid-gap: 5px;
+}
+
+//@media (max-width: 768px) {
+//  .buttons__block{
+//    justify-content: center;
+//  }
+//}
+.buttons__block__btn {
+  //width: 100%;
+  //margin-bottom: 2vh;
+
+
+  //width: 50%;
+  //width: 9vw;
+  width: 200px;
+  margin-bottom: 2vh;
+  height: 7vh;
+
+
+  background-color: #ddaa00;
+  color: black;
+  border: 1px solid #ddaa00;
+  font-family: inherit;
+  font-weight: 900;
+  line-height: inherit;
+  //font-size: 18px !important;
+  font-size: $font-size-app;
+  border-radius: 2.4rem;
+  padding: 1vh !important;
+}
+
+////////////////////////////////////////////////////////////////////
+// PROFIT DATA BLOCK
+////////////////////////////////////////////////////////////////////
+.profit__data__block__container {
+  background-color: $main-color-4;
+  border: 1px solid $main-color-3;
+  border-radius: 3rem;
+  overflow: hidden;
+}
+
+.profit__data__block__row {
+
+}
+
+.profit__data__block__col {
+  padding: 2vh;
+  text-align: center;
+}
+
+.profit__data__block__row__border {
+  border-bottom: 1px solid $main-color-3;
+}
+
+.profit__data__block__col__border {
+  //border-right: 1px solid $main-color-3;
+}
+
+.profit__data__block__header {
+  font-family: $font-family-1;
+}
+
+.profit__data__block__count {
+
+}
+
+////////////////////////////////////////////////////////////////////
+// EXCHANGE CHART
+////////////////////////////////////////////////////////////////////
+
+@media(max-width: 700px) {
+  .exchange__chart__container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media(max-width: 700px) {
+  .first__row__container {
+    order: 1
+  }
+  .second__row__container {
+    order: 2
+  }
+  .third__row__container {
+    order: 4
+  }
+  .fourth__row__container {
+    order: 3
+  }
+}
+
+.iframe {
+  //height: 57vh;
+  height: 68vh;
+  width: 100%;
+  //margin-right: 25px;
+}
+//@media(max-width: 1024px){
+//  .iframe{
+//    height: 60vh;
+//  }
+//}
+@media(max-height: 1024px){
+  .iframe{
+    height: 64vh;
+  }
+}
+@media(max-width: 700px) {
+  .exchange__chart__subBlock__container {
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 0 1rem;
+  }
+}
+
+.exchange__chart__subBlock {
+  //border: 1px solid white;
+  width: 20%;
+  height: 50px;
+  //height: 75px;
+  font-size: $font-size-app;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@media(max-width: 700px) {
+  .exchange__chart__subBlock {
+    width: 100%;
+    height: 35px;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+}
+
+.second_row {
+  width: 25%;
+}
+
+@media(max-width: 700px) {
+  .second_row {
+    width: 100%;
+  }
+}
+
+.third__row {
+  width: 50%;
+}
+
+@media(max-width: 700px) {
+  .third__row {
+    width: 100%;
+  }
+}
+
+.empty__input {
+  border: 2px solid darkred !important;
+}
+
+//****************************************************************************************************************************************
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// *********************************************NEW APP DESIGN *************************************************************************
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//****************************************************************************************************************************************
+////////////////////////////////////////////////////////////////////
+// SETTINGS BLOCK
+////////////////////////////////////////////////////////////////////
+.input__settings__container {
+  display: flex;
+
+}
+
+@media (max-width: 700px) {
+  .input__settings__container {
+    display: block;
+    margin-top: 50px;
+  }
+
+}
+
+.app__nd__right__container {
+
+}
+
+.app__nd__right__top__container {
+  height: 100%;
+  overflow: hidden;
+}
+
+.app__nd__right__top__container {
+  & .tab-content {
+    //height: 100%!important;
+    height: 90% !important;
+    overflow: scroll !important;
+  }
+}
+
+
+.app__nd__half__container {
+  width: 100%;
+}
+
+.app__nd__half {
+  width: 50% !important;
+}
+
+.app__nd__right__bottom__container {
+
+}
+
+.accordion__btn__container {
+  min-width: 116px;
+  width: 49%;
+  //width: 45%;
+  min-height: 35px;
+  height: auto;
+  padding: 5px;
+  background-color: #ddaa00;
+  color: $main-color-1;
+  border: 1px solid black;
+  font-family: inherit;
+  //font-weight: 900;
+  line-height: inherit;
+  //font-size: 18px !important;
+  //font-size: $font-size-app;
+  border-radius: 50px;
+
+  & .long__button {
+    width: 100% !important;
+  }
+
+  &:hover {
+    background-color: $main-color-3;
+    fill: $main-color-4;
+  }
+}
+
+
+////////////////////////////////////////////////////////////////////
+// Table Menu
+////////////////////////////////////////////////////////////////////
+.table__menu__container__app__nd {
+  color: white;
+  font-family: $font-family-1;
+  //font-family: $font-family-2;
+}
+
+.app__tabs__container {
+  width: 93vw;
+  padding: 1rem;
+}
+
+.table__menu__ico__container__app__nd {
+  border-bottom: 1px solid white;
+  height: 77px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+
+.nav-tabs .nav-link {
+  color: white !important;
+  height: 70px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: $font-size-app;
+}
+
+@media (max-width: 1024px) {
+  .nav-tabs .nav-link {
+    font-size: 16px;
+  }
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+  color: black !important;
+}
+
+.nav-tabs {
+  border: none !important;
+}
+
+.table__menu__tabs__app__nd {
+  position: fixed;
+  top: 15vh;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  width: 5vw !important;
+}
+
+@media (max-width: 768px) {
+  .table__menu__tabs__app__nd {
+    width: 10vw !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .table__menu__tabs__app__nd {
+    width: 10% !important;
+    top: 21vh;
+  }
+}
+
+//@media (max-width: 425px){
+//  .table__menu__tabs__app__nd{
+//    width: 12% !important;
+//  }
+//}
+.app__chat__header {
+  text-align: center;
+}
+
+.app__chat__container {
+  width: 90vw;
+  padding: 2rem;
+  height: 70vh;
+  overflow: scroll;
+}
+
+.nav-item.active {
+  background-color: white !important;
+}
+
+.general__rules__table__tabs {
+  border-bottom: 1px solid white !important;
+}
+
+.analysis__ico.nav-item.nav-link {
+  background: url("../../assets/menuBlockSVG/analytics.svg") center no-repeat;
+  background-size: 30px;
+}
+
+.analysis__ico.nav-item.nav-link.active {
+  background: url("../../assets/menuBlockSVG/analytics-black.svg") center no-repeat;
+  background-size: 30px;
+}
+
+.wallet__page__ico.nav-item.nav-link {
+  background: url("../../assets/menuBlockSVG/wallet.svg") center no-repeat;
+  background-size: 30px;
+}
+
+.wallet__page__ico.nav-item.nav-link.active {
+  background: url("../../assets/menuBlockSVG/wallet-black.svg") center no-repeat;
+  background-size: 30px;
+}
+
+.settings__ico.nav-item.nav-link {
+  background: url("../../assets/menuBlockSVG/settings-white.svg") center no-repeat;
+  background-size: 30px;
+}
+
+.settings__ico.nav-item.nav-link.active {
+  background: url("../../assets/settings.svg") center no-repeat;
+  background-size: 30px;
+}
+
+
+.history__ico.nav-item.nav-link {
+  background: url("../../assets/menuBlockSVG/history.svg") center no-repeat;
+  background-size: 30px;
+}
+
+.history__ico.nav-item.nav-link.active {
+  background: url("../../assets/menuBlockSVG/history-black.svg") center no-repeat;
+  background-size: 30px;
+}
+
+.current__price__ico.nav-item.nav-link {
+  background: url("../../assets/menuBlockSVG/dollar.svg") center no-repeat;
+  background-size: 30px;
+}
+
+.current__price__ico.nav-item.nav-link.active {
+  background: url("../../assets/menuBlockSVG/dollar-black.svg") center no-repeat;
+  background-size: 30px;
+}
+
+.contact__us__ico.nav-item.nav-link {
+  background: url("../../assets/menuBlockSVG/chat.svg") center no-repeat;
+  background-size: 30px;
+}
+
+.contact__us__ico.nav-item.nav-link.active {
+  background: url("../../assets/menuBlockSVG/chat-black.svg") center no-repeat;
+  background-size: 30px;
+}
+
+.news__ico.nav-item.nav-link {
+  background: url("../../assets/menuBlockSVG/newspaper.svg") center no-repeat;
+  background-size: 30px;
+}
+
+.news__ico.nav-item.nav-link.active {
+  background: url("../../assets/menuBlockSVG/newspaper-black.svg") center no-repeat;
+  background-size: 30px;
+}
+
+.chat__ico.nav-item.nav-link {
+  background: url("../../assets/menuBlockSVG/call.svg") center no-repeat;
+  background-size: 30px;
+}
+
+.chat__ico.nav-item.nav-link.active {
+  background: url("../../assets/menuBlockSVG/call.svg") center no-repeat;
+  background-size: 30px;
+}
+
+.logout__ico.nav-item.nav-link {
+  background: url("../../assets/menuBlockSVG/exit.svg") center no-repeat;
+  background-size: 30px;
+}
+
+.logout__ico.nav-item.nav-link.active {
+  background: url("../../assets/menuBlockSVG/exit-black.svg") center no-repeat;
+  background-size: 30px;
+}
+
+////////////////////////////////////////////////////////////////////
+// resize block
+////////////////////////////////////////////////////////////////////
+.rt-tbody {
+  //min-width: 200px !important;
+  min-width: 180px !important;
+  //width: 200px !important;
+}
+
+.rt-td {
+  //width: 200px !important;
+  width: 180px !important;
+}
+
+.resize__block__container {
+  //width: 100px;
+  //height: 600px;
+  border: 1px solid white;
+  overflow: hidden;
+  //overflow:scroll;
+  &.border-none {
+    border: none;
+  }
+}
+
+.noneBlock {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .resize__block__container {
+    width: 90vw !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .resize__block__container__margin {
+    margin-top: 58px;
+  }
+}
+
+@media (max-width: 768px) {
+  .resize__block__container__exchange__chart {
+    order: 3;
+
+  }
+}
+
+@media (max-width: 700px) {
+  .resize__block__container__exchange__chart {
+    height: 100% !important;
+  }
+}
+
+.react-resizable-handle {
+  height: 100% !important;
+  //width: 10px !important;
+  width: 3px !important;
+}
+
+.resize__block__container__pairs {
+  //background-color: white!important;
+}
+
+@media (max-width: 768px) {
+  .resize__block__container__pairs {
+    width: 90vw !important;
+  }
+
+}
+
+.react-resizable-handle-se {
+  cursor: col-resize !important;
+  //background-color: darkred!important;
+}
+
+//.resize__block__container__pairs.react-resizable-handle{
+.resize__block__container__pairs {
+  & .react-resizable-handle {
+    width: 100% !important;
+    height: 3px !important;
+    background-color: white;
+  }
+}
+
+.row {
+  margin: 0 !important;
+}
+
+////////////////////////////////////////////////////////////////////
+// chat
+////////////////////////////////////////////////////////////////////
+
+.chat__messages__container__block__user {
+  height: 67vh;
+  overflow-y: scroll;
+  border-radius: 5px;
+  margin-top: 10px;
+  padding: 2rem;
+}
+
+.chat__messages__empty__title {
+  text-align: center;
+}
+
+@media (max-width: 425px) {
+  .chat__messages__empty__title {
+    display: none;
+  }
+}
+
+.btn__chat__container {
+  position: fixed;
+  //bottom: 5vh;
+  bottom: 1vh;
+  right: 5vw;
+  z-index: 900;
+}
+
+.btn__chat {
+  height: calc(2.2rem + 4vh);
+  width: calc(2.2rem + 4vh);
+  border-radius: 50%;
+  border: 1px solid $main-color-3;
+  background-color: $main-color-4;
+  margin-left: 2vh;
+  cursor: pointer;
+  padding: 1.5vh;
+  fill: $main-color-3;
+  transition: .2s ease-in-out;
+  //animation: 15s btn__chat__path 0s linear infinite;
+}
+
+.btn__chat:hover {
+  background-color: $main-color-3;
+  fill: $main-color-4;
+}
+
+@keyframes btn__chat__path {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.chat__header__left {
+  width: 15vw;
+}
+
+.chat__header {
+  color: $main-color-3;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  font-family: $font-family-2;
+  font-weight: 100;
+}
+
+@media (max-width: 700px) {
+  .chat__header {
+    //margin-top: 50px;
+    display: none;
+  }
+
+}
+
+.chat__input__container {
+  position: fixed;
+  //height: 25vh;
+  padding: 0 calc(5vw + 15px) 5vh calc(5vw + 15px);
+  width: 100%;
+  bottom: 0;
+  left: 0;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+@media(max-width: 425px) {
+  .chat__input__container {
+    padding: 2vw;
+  }
+}
+
+.chat__message__input {
+  display: inline-block;
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  line-height: 1.2rem;
+  font-size: 1.2rem;
+  white-space: nowrap;
+  border-radius: 2.4rem;
+  padding: 2vh 3vh 2vh 3vh !important;
+  height: auto !important;
+}
+
+.chat__message__input__error {
+  border: 1px solid red !important;
+  display: inline-block;
+  background-color: black;
+  color: white;
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  line-height: 1.2rem;
+  font-size: 1.2rem;
+  white-space: nowrap;
+  border-radius: 2.4rem;
+  padding: 2vh 3vh 2vh 3vh !important;
+  height: auto !important;
+}
+
+.chat__message__btn {
+  display: inline-block;
+}
+
+@media(max-width: 475px) {
+  .chat__message__btn {
+    padding: 2vh !important;
+  }
+}
+
+.chat__messages__text__style {
+  margin: 10px;
+  border: 1px solid black;
+
+  border-radius: 2rem;
+  width: fit-content;
+  padding: 5px 20px;
+  color: black;
+}
+
+.chat__messages__text__right {
+  margin-left: auto;
+  background: white;
+}
+
+.chat__messages__text__left {
+  margin-left: 10px;
+  background: antiquewhite;
+}
+
+////////////////////////////////////////////////////////////////////
+// wallet
+////////////////////////////////////////////////////////////////////
+@media(max-width: 700px) {
+  .wallet__container__wallet {
+    margin-top: 50px;
+  }
+}
+
+.wallet__container__wallets {
+  padding: 1rem;
+  width: 25vw;
+}
+
+@media(max-width: 1024px) {
+  .wallet__container__wallets {
+    justify-content: center;
+    width: 44vw;
+  }
+}
+
+@media(max-width: 768px) {
+  .wallet__container__wallets {
+    width: 43vw;
+  }
+}
+
+@media(max-width: 700px) {
+  .wallet__container__wallets {
+    width: 87vw;
+  }
+}
+
+@media(max-width: 425px) {
+  .wallet__container__wallets {
+    padding: 10px 20px 10px 10px;
+  }
+}
+
+@media(max-width: 425px) {
+  .wallet__container__wallets {
+    padding: 0 20px 10px 3px;
+  }
+}
+
+
+.wallet__card__container__wrapper {
+  color: black;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  background: $main-color-2;
+  //width: 25vw;
+  width: 100%;
+  font-family: $font-family-1;
+  border-radius: 50px;
+  //height: 60vh;
+  height: 100%;
+
+}
+
+//@media(max-width: 1024px){
+//  .wallet__card__container__wrapper{
+//    justify-content: center;
+//    width: 39vw;
+//  }
+//}
+//@media(max-width: 768px){
+//  .wallet__card__container__wrapper{
+//    width: 39vw;
+//  }
+//}
+//@media(max-width: 700px){
+//  .wallet__card__container__wrapper{
+//    width: 80vw;
+//  }
+//}
+.input__wallet__map__container {
+  padding: 1rem;
+}
+
+.input__different {
+  display: inline-block;
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  line-height: 1.2rem;
+  font-size: 1.2rem;
+  white-space: nowrap;
+  border-radius: 2.4rem;
+  padding: 2vh 3vh 2vh 3vh !important;
+  height: auto !important;
+  width: 100%;
+}
+
+.wallet__container__tabs {
+  display: flex;
+  flex-wrap: nowrap !important;
+}
+
+.wallet__half__tabs {
+  width: 50%;
+}
+
+.wallet__card__container {
+
+  border: 1px solid white;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
+  //padding: 10px 20px;
+  padding: 10px 0;
+}
+
+.wallets__rendering {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.wallet__tabs__wrapper {
+  //padding: 1rem;
+  display: flex;
+  //justify-content: space-between;
+  align-items: center;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+  //width: 80vw;
+  width: 100%;
+  height: 100px;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+    background-color: $main-color-2;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: $main-color-1;
+    border-radius: 10px;
+    border: 1px solid white;
+  }
+}
+
+
+////////////////////////////////////////////////////////////////////
+// wallet map
+////////////////////////////////////////////////////////////////////
+
+.create__different__wallets__container {
+  //margin-right: 10px;
+  padding: 1rem;
+}
+
+@media(max-width: 425px) {
+  .create__different__wallets__container {
+    padding: 10px;
+  }
+}
+
+@media(max-width: 425px) {
+  .wallet__card__add__wallet__button {
+    padding: 2vh !important;
+  }
+}
+
+.wallet__card__add__wallet__button__disabled {
+  background: black !important;
+  color: $main-color-2 !important;;
+  cursor: no-drop;
+  border: 1px solid $main-color-2 !important;
+
+  & :hover {
+    background: black !important;
+    color: $main-color-2 !important;
+    border: 1px solid $main-color-2 !important;
+  }
+}
+
+////////////////////////////////////////////////////////////////////
+//Pairs Block
+////////////////////////////////////////////////////////////////////
+.ReactTable .rt-th, .ReactTable .rt-td {
+  padding: 0 !important;
+}
+
+.app__nd__right__top__container {
+  & .nav {
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+  }
+}
+
+
+.Table__itemCount {
+  font-size: 14px;
+}
+
+.Table__pagination {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px 10px;
+}
+
+.Table__pageButton {
+  font-size: 15px;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.Table__pageButton:disabled {
+  cursor: not-allowed;
+  color: gray;
+}
+
+.Table__pageButton {
+  color: #bdbdbd !important;
+}
+
+.Table__pageButton--active {
+  color: white !important;
+  font-weight: bold;
+}
+
+.ReactTable {
+  flex-direction: column;
+}
+
+.Pairs__container {
+  //width: 100%;
+  //overflow-y: scroll;
+  //height: 15vh;
+  //padding: 10px;
+}
+
+.pairs__star__relative {
+  position: relative;
+  cursor: pointer;
+  padding: 7px;
+}
+
+.active__pair {
+  background: $main-color-3 !important;
+  color: $main-color-1 !important;
+}
+
+.pairs__star {
+  background: url("../../assets/star.svg") no-repeat;
+  position: absolute;
+  top: 7px;
+  left: 85%;
+  width: 25px;
+  height: 25px;
+  background-size: 25px;
+}
+
+.pairs__star__yellow {
+  background: url("../../assets/starYellow.svg") no-repeat;
+  position: absolute;
+  top: 7px;
+  left: 85%;
+  width: 25px;
+  height: 25px;
+  background-size: 25px;
+}

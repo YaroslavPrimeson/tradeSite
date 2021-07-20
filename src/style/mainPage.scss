@@ -1,0 +1,17 @@
+.main{
+  display: flex;
+  flex-direction: row;
+  padding: 20px 15px;
+  justify-content: space-between;
+}
+@media (max-width:1024px) {
+  .main{
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    padding: 50px;
+  }}
+@media (max-width:425px) {
+  .main{
+    padding: 20px;
+  }}

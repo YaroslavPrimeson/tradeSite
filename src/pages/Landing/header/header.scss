@@ -1,0 +1,369 @@
+@import "../../../App";
+
+$header-height: 15vh;
+$header-block-width: 30vw;
+
+////////////////////////////////////////////////////////////////////
+// Header
+////////////////////////////////////////////////////////////////////
+.header__landing{
+  height: $header-height;
+  width: 100%;
+  display: flex;
+  //flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  z-index: 900!important;
+}
+.headerLanding__logo__img{
+  height: 100%;
+}
+@media (max-width: 610px) {
+  .headerLanding__logo__img{
+  height: 80%;
+  }
+}
+@media (max-width: 425px) {
+  .headerLanding__logo__img{
+    height: 70%;
+  }
+}
+.headerLanding__logo__triangle{
+  display: inline-block;
+  background-color: $main-color-4;
+  padding: 2vh 0 2vh 6vh;
+  width: $header-block-width;
+  height: $header-height;
+  clip-path: polygon(0% 0%, 60% 0%, 100% 0, 60% 100%, 0% 100%);
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .headerLanding__logo__triangle{
+    padding: 2vh 0 2vh 3vh;
+  }
+}
+@media (max-width: 630px) {
+  .headerLanding__logo__triangle{
+    padding: 3vh 0 2vh 3vh;
+  }
+}
+@media (max-width: 630px) {
+  .headerLanding__logo__triangle{
+    padding: 3vh 0 2vh 1vh;
+  }
+}
+@media (max-width: 425px) {
+  .headerLanding__logo__triangle{
+    width: 30vw;
+  }
+}
+.headerLanding__btn__login__container{
+  width: $header-block-width;
+  padding-right: 6vw;
+  display: flex;
+  justify-content: flex-end;
+}
+.header__landing__text{
+  color: $main-color-3;
+  font-size: 3rem;
+  line-height: 3rem;
+  font-family: $font-family-2;
+  font-weight: 100;
+  cursor: pointer;
+  position: absolute;
+  top: -$header-height;
+  animation: .5s header__landing__text .1s ease-in-out forwards;
+}
+@media (max-width: 700px) {
+  .header__landing__text{
+    width: 100vw;
+    order: 3;
+    display: flex;
+    justify-content: center;
+  }
+
+}
+@keyframes header__landing__text {
+  from{
+    position: absolute;
+    top: -$header-height;
+  }
+  to{
+    position: relative;
+    top: 0;
+  }
+}
+.headerLanding__btn__settings{
+  height: calc(1.2rem + 4vh);
+  width: calc(1.2rem + 4vh);
+  border-radius: 50%;
+  border: 1px solid $main-color-3;
+  background-color: $main-color-4;
+  margin-left: 2vh;
+  cursor: pointer;
+  padding: 1.5vh;
+  fill: $main-color-3;
+  transition: .2s ease-in-out;
+  animation: 15s settings__icon__path 0s linear infinite;
+}
+.headerLanding__btn__settings:hover{
+  background-color: $main-color-3;
+  fill: $main-color-4;
+}
+@keyframes settings__icon__path {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+////////////////////////////////////////////////////////////////////
+// Modal Auth
+////////////////////////////////////////////////////////////////////
+.modal-content{
+  background-color: transparent;
+}
+.modal__form{
+  padding: 3vh;
+  border-radius: 1rem;
+  background-color: $main-color-1;
+  border: 1px solid $main-color-3;
+  color: $main-color-3;
+}
+.form__title{
+  padding: 1vh 0 1vh 0;
+  font-family: $font-family-1;
+  text-align: center;
+  color: $main-color-2;
+  h3{
+    font-size: 2.5rem;
+  }
+}
+.form__group__control{
+  font-family: $font-family-2;
+  font-weight: bolder;
+}
+.form__label{
+  font-family: $font-family-2;
+}
+.form__control{
+  background-color: transparent;
+  font-weight: bolder;
+  color: $main-color-3;
+}
+.form__control:focus{
+  font-weight: bolder;
+  color: $main-color-3;
+  background-color: transparent;
+  border: 1px solid $main-color-3;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem transparent;
+}
+.form__button{
+  padding: 2vh 0 2vh 0;
+}
+.form__button__btn{
+  width: 100%;
+}
+.form__link{
+  text-align: center;
+  color: $main-color-3;
+  font-family: $font-family-1;
+}
+.form__link:hover{
+  color: $main-color-3;
+  text-decoration: underline;
+}
+////////////////////////////////////////////////////////////////////
+// Modal Settings
+////////////////////////////////////////////////////////////////////
+.modal__settings__container{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: $main-color-1;
+  z-index: 1050;
+  overflow: auto;
+}
+.modal__settings__close__container{
+  height: $header-height;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 6vw;
+}
+.modal__settings__close__btn{
+  height: calc(1.2rem + 4vh);
+  width: calc(1.2rem + 4vh);
+  border-radius: 50%;
+  border: 1px solid $main-color-3;
+  background-color: $main-color-4;
+  margin-left: 2vh;
+  cursor: pointer;
+  padding: 1.5vh;
+  fill: $main-color-3;
+  transition: .2s ease-in-out;
+}
+.modal__settings__close__btn:hover{
+  background-color: $main-color-3;
+  fill: $main-color-4;
+}
+.modal__settings__card__settings__container{
+  border-top: 1px solid $main-color-3;
+  color: $main-color-3;
+  font-family: $font-family-2;
+}
+.modal__settings__card__row{
+  padding: 0 5vw;
+}
+.modal_settings_settings__container{
+  padding: 0 5vw;
+}
+.modal__settings__input{
+  max-width: 500px!important;
+}
+.modal__settings__p__text{
+  width: 100%;
+  text-align: left;
+}
+
+.error__container{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  width: 50vw;
+  height: 50vh;
+  z-index: 11;
+}
+
+////////////////////////////////////////////////////////////////////
+// Firebase UI
+////////////////////////////////////////////////////////////////////
+.firebaseui-idp-button{
+  text-align: center!important;
+  display: flex!important;
+  justify-content: center!important;
+  align-items: center!important;
+  width: 100%;
+  max-width: 500px!important;
+  background-color: $background-color-1!important;
+  color: $main-color-3!important;
+  border: 1px solid $main-color-3!important;
+
+  font-family: $font-family-2!important;
+  font-weight: 900!important;
+  line-height: $font-size-btn!important;
+  font-size: $font-size-btn!important;
+  white-space: nowrap!important;
+
+  border-radius: $font-size-btn * 2!important;
+  padding: $padding-btn-1!important;
+
+  transition: .3s ease-in-out;
+}
+.firebaseui-idp-button:hover{
+  background-color: $main-color-1!important;
+  color: $main-color-3!important;
+  border: 1px solid $main-color-3!important;
+  .firebaseui-idp-text{
+    color: $main-color-4!important;
+  }
+}
+.firebaseui-idp-button:hover .firebaseui-idp-text{
+  color: $main-color-3!important;
+}
+.firebaseui-idp-google .firebaseui-idp-text{
+  color: $main-color-3!important;
+}
+.firebaseui-card-content{
+  padding: 0!important;
+}
+.firebaseui-container{
+  max-width: 500px!important;
+  margin: 0!important;
+  background-color: $main-color-1!important;
+  color: $main-color-3!important;
+}
+.firebaseui-title{
+  color: $main-color-3!important;
+  font-family: $font-family-2!important;
+  font-weight: 900!important;
+}
+.firebaseui-country-selector {
+  color: $main-color-3!important;
+}
+.firebaseui-textfield.mdl-textfield .firebaseui-input{
+  color: $main-color-3!important;
+}
+.firebaseui-input .firebaseui-input-invalid{
+  color: $main-color-3!important;
+}
+.firebaseui-label{
+  color: $main-color-3!important;
+}
+.firebaseui-dialog{
+  background-color: $main-color-4!important;
+  border: 1px solid $main-color-3!important;
+  border-radius: 3rem;
+}
+.firebaseui-list-box-label-wrapper{
+  color: $main-color-3!important;
+}
+.mdl-button--raised.mdl-button--colored{
+  text-align: center!important;
+  max-width: 500px!important;
+  background-color: $background-color-1!important;
+  color: $main-color-3!important;
+  border: 1px solid $main-color-3!important;
+  font-family: $font-family-2!important;
+  font-weight: 900!important;
+  border-radius: $font-size-btn * 2!important;
+  transition: .3s ease-in-out;
+}
+.mdl-button--raised.mdl-button--colored:hover{
+  background-color: $main-color-3!important;
+  color: $main-color-4!important;
+  border: 1px solid $main-color-3!important;
+}
+.mdl-button--primary.mdl-button--primary{
+  text-align: center!important;
+  max-width: 500px!important;
+  //background-color: $background-color-1!important;
+  color: $main-color-3!important;
+  //border: 1px solid $main-color-3!important;
+  font-family: $font-family-2!important;
+  font-weight: 900!important;
+  border-radius: $font-size-btn * 2!important;
+  transition: .3s ease-in-out;
+}
+.firebaseui-text{
+  color: $main-color-3!important;
+  a{
+    color: $main-color-3!important;
+  }
+}
+.firebaseui-id-resend-link{
+  color: $main-color-3!important;
+}
+.firebaseui-link{
+  color: $main-color-3!important;
+}
+.mdl-shadow--2dp{
+  box-shadow: none!important;
+}
+.firebaseui-id-resend-countdown{
+  color: $main-color-3!important;
+}
+input.firebaseui-input, input.firebaseui-input-invalid{
+  color: $main-color-3!important;
+}
+.firebaseui-container{
+  dialog{
+    color: $main-color-3!important;
+  }
+}
+dialog{
+  color: $main-color-3!important;
+}

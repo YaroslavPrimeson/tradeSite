@@ -1,0 +1,353 @@
+@import "../../App";
+////////////////////////////////////////////////////
+// Section1
+////////////////////////////////////////////////////
+.first__section{
+  position: relative;
+  padding: 10vh $padding-sides 0 $padding-sides;
+  //height: 100vh;
+  height: 90vh;
+}
+
+
+.first__section__header{
+  font-family: $font-family-1;
+  h3{
+    font-size: 4rem;
+  }
+}
+.first__section__text{
+  font-family: $font-family-2;
+}
+.first__section__btn__container{
+  margin-top: 10vh;
+}
+
+@media (max-width: 1120px) {
+  .col{
+    margin-top: 10px;
+  }
+}
+
+
+////////////////////////////////////////////////////
+// Section2
+////////////////////////////////////////////////////
+.section2__container{
+  position: relative;
+  height: 120vh;
+  width: 100%;
+  margin-top: 120px;
+}
+@media (max-width:768px) {
+  .section2__container{
+    height: 90vh;
+  }
+}
+@media (max-width:425px) {
+  .section2__container{
+    height: 70vh;
+  }
+}
+@media (max-width:375px) {
+  .section2__container{
+    height: 50vh;
+  }
+}
+.section2__img1{
+  width: 100%;
+  animation: 5s margin__animation 0s ease-in-out infinite;
+}
+.section2__img2{
+  position: absolute;
+  //height: 90%;
+  width: 25vw;
+  right: 5vh;
+  top: 5vh;
+  animation: 5s margin__animation 1s ease-in-out infinite;
+}
+@keyframes margin__animation {
+  from{
+    margin-top: 0;
+  }
+  50%{
+    margin-top: 5vh;
+  }
+  to{
+    margin-top: 0;
+  }
+}
+////////////////////////////////////////////////////
+// Components
+////////////////////////////////////////////////////
+.section3__container{
+  height: 120vh;
+  width: 100%;
+}
+
+@media (max-width: 1200px) {
+  .section3__container{
+    height:auto;
+  }
+}
+.section3__container__inner{
+  padding: 10vh $padding-sides 0 $padding-sides;
+}
+.section3__container__background{
+  position: absolute;
+  //transform: translate(0, -25%);
+  height: 100vh;
+  width: 100%;
+  background-color: $main-color-3;
+  clip-path: polygon(100% 50%, 0 0, 0 100%);
+}
+.section3__small__card__container{
+  height: 40vh;
+  width: 100%;
+  border-radius: 3rem;
+  background-color: $main-color-1;
+  border: 1px solid $main-color-3;
+  margin: 2vh;
+  padding: 4vh 2vh 4vh 2vh;
+}
+.section3__small__card__img{
+  height: 10vh;
+}
+.section3__small__card__header{
+  font-family: $font-family-1;
+}
+.section3__small__card__text{
+  font-family: $font-family-2;
+}
+.section3__big__card__container{
+  padding: 4vh 2vh 4vh 2vh;
+  height: 80vh;
+  width: 100%;
+  border-radius: 3rem;
+  background-color: $main-color-2;
+  border: 1px solid $main-color-3;
+  color: $main-color-4;
+  margin: 2vh;
+  overflow: hidden;
+}
+.section3__big__card__img{
+  position: relative;
+  width: 80%;
+  bottom: -5vh;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.section3__big__card__header{
+  font-family: $font-family-1;
+}
+.section3__big__card__text{
+  font-family: $font-family-2;
+  font-weight: bolder;
+}
+////////////////////////////////////////////////////
+// Section4
+////////////////////////////////////////////////////
+.section4__container{
+  height: 110vh;
+  width: 100%;
+}
+.section4__phone__container{
+  position: relative;
+  width: 50vw;
+  height: 50vh;
+}
+@media (max-width:761px) {
+  .section4__phone__container {
+    display: flex;
+    justify-content: center;
+    order: 2;
+    height: 60vh;
+    padding: 2vh 4vh 4vh;
+  }
+}
+@media (max-width:425px) {
+  .section4__phone__container {
+    display: flex;
+  padding: 4vh;
+    order: 2;
+    height: 60vh;
+  }
+}
+.section4__img1{
+  position: absolute;
+  width: 45%;
+  transform: rotate(-10deg) translate(+5%, +10%);
+}
+@media (max-width:761px) {
+  .section4__img1 {
+    width: 30%;
+  }
+}
+.section4__img2{
+  position: absolute;
+  width: 45%;
+  transform: rotate(+10deg) translate(+90%, +12%);
+}
+@media (max-width:761px) {
+  .section4__img2 {
+    width: 29%;
+  }
+}
+.section4__content__container{
+  padding: 15vh 2vh 5vh 2vh;
+}
+
+@media (max-width: 761px) {
+  .section4__content__container{
+    padding: 7vh 2vh 5vh 8vh;
+  }
+}
+.section4__content__header{
+  font-family: $font-family-1;
+}
+.section4__content__text{
+  font-family: $font-family-2;
+  font-weight: bolder;
+}
+.section4__content__icons__container{
+  margin-top: 10vh;
+}
+.section4__content__icon{
+  margin-top: 2vh;
+}
+.section4__content__icon__img{
+  display: inline-block;
+}
+.section4__content__icon__text{
+  display: inline-block;
+  font-family: $font-family-2;
+  font-weight: bolder;
+  margin-left: 2vw;
+}
+////////////////////////////////////////////////////
+// Section5
+////////////////////////////////////////////////////
+.section5__content__container{
+  padding: 5vh 2vh 5vh 10vh;
+}
+.section5__image__container{
+  padding: 5vh 0 5vh 0;
+}
+.section5__img{
+  width: 130%;
+  transform: translate(15%, 0);
+}
+////////////////////////////////////////////////////
+// Video
+////////////////////////////////////////////////////
+.video__container{
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+}
+@media (max-width: 768px){
+  .video__container{
+    height: 70vh;
+  }
+}
+@media (max-width: 450px){
+  .video__container{
+    height: 40vh;
+  }
+}
+@media (max-width: 375px){
+  .video__container{
+    height: 35vh;
+  }
+}
+@media (max-width: 320px){
+  .video__container{
+    height: 30vh;
+  }
+}
+////////////////////////////////////////////////////
+// Price
+////////////////////////////////////////////////////
+.section__price__container{
+  width: 100%;
+  //height: 120vh;
+  height: auto;
+  padding: 10vh ;
+}
+
+@media (max-width: 768px) {
+  .section__price__container{
+    padding: 5vh;
+  }
+}
+.section__price__container__header{
+  font-family: $font-family-1;
+}
+.section__price__container__header__text{
+  font-family: $font-family-2;
+  font-weight: bolder;
+}
+.section__price__card__container{
+  height: 60vh;
+  width: 100%;
+  border-radius: 3rem;
+  background-color: $main-color-1;
+  border: 1px solid $main-color-3;
+  color: $main-color-3;
+  margin: 2vh;
+  overflow: hidden;
+  cursor: pointer;
+  transition: .2s ease-in-out;
+}
+
+@media (max-width: 600px) {
+  .section__price__card__container{
+margin: 0;
+  }
+}
+.section__price__card__container2{
+  height: 60vh;
+  width: 100%;
+  border-radius: 3rem;
+  transform: scale(1.1);
+  background-color: $main-color-2;
+  border: 1px solid $main-color-3;
+  color: $main-color-4;
+  margin: 2vh;
+  overflow: hidden;
+  cursor: pointer;
+  transition: .2s ease-in-out;
+}
+@media (max-width: 690px) {
+  .section__price__card__container2{
+    margin: 1vh;
+  }
+}
+.section__price__card__img{
+  width: 100%;
+  max-height: 20vh;
+  object-fit: cover;
+}
+.section__price__card__content{
+  padding: 4vh 2vh 4vh 2vh;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.section__price__card__header{
+  font-family: $font-family-1;
+  width: 100%;
+  text-align: center;
+}
+.section__price__card__text{
+  font-family: $font-family-2;
+  font-weight: bolder;
+}
+.section__price__card__btn__container{
+  display: flex;
+  justify-content: center;
+}
+.section__price__card__btn{
+
+}

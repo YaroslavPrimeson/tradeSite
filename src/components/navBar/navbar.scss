@@ -1,0 +1,86 @@
+.navbar__container{
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px 20px;
+  border-bottom: 1px solid white;
+  align-items: center;
+}
+.navbar__title{
+  margin: 0;
+}
+.user-button__container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 350px;
+}
+
+@media (max-width: 768px) {
+  .user-button__container{
+    width: 300px;
+  }
+}
+@media (max-width: 425px) {
+  .user-button__container{
+    width: 200px;
+  }
+}
+.user__container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.user__img{
+  width:30px;
+  height: 35px;
+background-color: white;
+  border-radius: 50%;
+}
+.btn__logout{
+  width:200px;
+  border-radius: 5px;
+  height: 55px;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 25px;
+  border: 1px solid white;
+  background-color: #000000;
+  z-index:2;
+}
+
+@media (max-width: 768px) {
+  .btn__logout{
+    width: 150px;
+  }
+}
+@media (max-width: 768px) {
+  .btn__logout{
+    width: 100px;
+  }
+}
+.btn__logout:hover{
+  text-decoration: none;
+  //box-shadow: 0 0 0 0.2rem rgb(0 0 0 / 55%);
+  color: #000000;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+}
+.btn__logout:focus{
+  box-shadow:none;
+  text-decoration: none!important;
+  background-color: #020202;
+  color: #ffffff;
+  border-color: white;
+}
+.btn__logout:active{
+  box-shadow:none;
+  //text-decoration: none!important;
+  color: #000000!important;
+  background-color: #ffffff !important;
+  border-color: #000000 !important;
+}
+.btn-primary:not(:disabled):not(.disabled):active:focus, .show>.btn-primary.dropdown-toggle:focus{
+  box-shadow: 0 0 0 0.2rem #c5cbcea1;
+}

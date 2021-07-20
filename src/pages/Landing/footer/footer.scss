@@ -1,0 +1,87 @@
+@import "../../../App";
+
+.footerL__container{
+  color: $main-color-3;
+  padding: 5vh;
+  border-top: 1px solid $main-color-3;
+  height: 300px;
+  font-family: $font-family-2;
+  font-weight: bolder;
+  li{
+    list-style-type: none;
+    cursor: pointer;
+  }
+  li:hover{
+    text-decoration: underline;
+  }
+}
+
+@media (max-width: 1400px) {
+  .footerL__container{
+    height: auto;
+  }
+}
+.footerL__wrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  //margin-top: 100px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .footerL__wrapper{
+flex-direction: column;
+
+  }
+}
+.footerL__logo-img{
+  width: 100px;
+}
+.footerL__navList{
+  display: flex;
+  width: 200px;
+  justify-content: space-between;
+}
+.footerL__list{
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .footerL__navList{
+    width: 200px;
+    margin-top: 25px;
+  }
+}
+.footerL__social{
+  margin-top: 25px;
+}
+.footerL__social-title{
+  font-family: $font-family-1;
+}
+.footerL__social-nav{
+  display: flex;
+  padding: 0!important;
+}
+.footerL__social-list{
+  margin-right: 20px;
+}
+.footerL__social-link{
+  border: 1px solid white;
+  border-radius: 50%;
+  width: 50px;
+  display: inline-block;
+  height: 50px;
+  background-color: transparent;
+  transition: .1s ease-in-out;
+}
+.footerL__social-link:hover{
+  transform: scale(1.05);
+  //background-color: #000000;
+}
+
+.footerL__social-img{
+  width:25px;
+  display: block;
+  margin: 12px auto;
+}

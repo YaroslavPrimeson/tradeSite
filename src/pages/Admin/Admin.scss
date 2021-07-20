@@ -1,0 +1,197 @@
+@import "../../App";
+
+.admin__container {
+  min-height: 100vh;
+  background-color: $main-color-1;
+  padding: 0 5vw;
+}
+
+/////////////////////////////////////////////////////////////////////
+// TABS
+/////////////////////////////////////////////////////////////////////
+.tabs__container {
+  padding: 3vh 0;
+}
+
+.admin__container {
+  .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    background-color: $main-color-2 !important;
+    color: $main-color-4 !important;
+    border: 1px solid $main-color-2 !important;
+    border-radius: $font-size-btn * 2 !important;
+  }
+
+  .nav-link {
+    background-color: $background-color-1 !important;
+    border-radius: $font-size-btn * 2 !important;
+    margin: 1vh;
+  }
+
+  .nav-link:hover {
+    background-color: $main-color-3 !important;
+    color: $main-color-4 !important;
+  }
+}
+
+.admin__tab__container {
+  padding: 1vh;
+  color: $main-color-3;
+}
+
+.admin__statistic__card {
+  font-family: $font-family-2;
+  font-weight: bolder;
+  border: 1px solid $main-color-3;
+  border-radius: 3rem;
+  padding: 2vh;
+  margin-bottom: 2vh;
+
+
+  //display: block!important;
+}
+
+.admin__statistic__row__container {
+  display: block;
+}
+
+.admin__statistic__row__header {
+  font-family: $font-family-1;
+  display: inline-block;
+}
+
+.admin__statistic__row__btn {
+  width: 100%;
+  margin: 1vh;
+}
+
+
+/////////////////////////////////////////////////////////////////////
+// Trade Navigation
+/////////////////////////////////////////////////////////////////////
+.trade__navigation__container {
+  border: 1px solid white;
+  padding: 1rem;
+  border-radius: 50px;
+  overflow: scroll;
+  height: 85vh;
+}
+
+.navigation__users__container {
+  color: $main-color-3;
+}
+
+.navigation__users__wrapper {
+  border-bottom: 1px solid;
+  padding: 1rem;
+}
+.trade__navigation__return__button{
+  position: fixed;
+  bottom: 9vh;
+  right: 12vw;
+  z-index: 11;
+}
+.operations__block__admin{
+  width:22% !important;
+}
+.actions__block__admin{
+ width:22% !important;
+}
+.orders__block__admin{
+ width:22% !important;
+}
+.state__block__admin{
+ width:22% !important;
+}
+
+
+/////////////////////////////////////////////////////////////////////
+// Trade Navigation:operations
+/////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////
+// Trade Navigation:actions
+/////////////////////////////////////////////////////////////////////
+.actions__card__container{
+  padding: 1vh;
+  border-bottom: 1px solid $main-color-3;
+  position: relative;
+}
+
+/////////////////////////////////////////////////////////////////////
+// Trade Navigation:orders
+/////////////////////////////////////////////////////////////////////
+.orders__container__admin {
+  padding: 1rem;
+  line-height: 1.8rem;
+}
+
+/////////////////////////////////////////////////////////////////////
+// Trade Navigation:state
+/////////////////////////////////////////////////////////////////////
+.state__container__admin{
+  padding: 1rem;
+  line-height: 1.8rem;
+}
+/////////////////////////////////////////////////////////////////////
+// Chat Admin
+/////////////////////////////////////////////////////////////////////
+.chat__container__admin {
+  color: white;
+}
+
+.chat__messenger__allUser__list__admin__admin {
+  border-bottom: 1px solid white;
+  height: 15vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.chat__messenger__admin__container {
+  display: flex;
+  flex-direction: column;
+  //align-items: center;
+  width: fit-content;
+}
+
+.chat__messenger__list__logo__admin {
+  border-radius: 50%;
+  width: 100px;
+}
+
+.chat__messenger__img__admin {
+  width: 70px;
+  height: 70px;
+}
+
+.chat__messenger__list__logo__text__admin {
+  color: white;
+}
+
+.chat__messages__text__style {
+  margin: 10px;
+  border: 1px solid black;
+
+  border-radius: 2rem;
+  width: fit-content;
+  padding: 5px 20px;
+}
+
+.chat__messages__text__right {
+  margin-left: auto;
+  background: white;
+}
+
+.chat__messages__text__left {
+  margin-left: 10px;
+  background: antiquewhite;
+}
+
+.chat__messages__container__block__admin {
+  height: 67vh;
+  overflow-y: scroll;
+  border-radius: 5px;
+  margin-top: 10px;
+  padding: 2rem;
+}

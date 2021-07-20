@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap');
+
+/////////////////////////////////////////////////////////////////////
+// Main Configs
+/////////////////////////////////////////////////////////////////////
+$main-color-1: #111111;
+$main-color-2: #ddaa00;
+$main-color-3: white;
+$main-color-4: black;
+
+$padding-sides: 6vw;
+
+$font-size-header: calc(3vh + 3vw);
+$font-size-app:20px;
+
+$font-family-1: 'Righteous', cursive;
+$font-family-2: 'Lato', sans-serif;
+
+
+/////////////////////////////////////////////////////////////////////
+// BTN
+/////////////////////////////////////////////////////////////////////
+$padding-btn-1: 2vh 5vh 2vh 5vh;
+$font-size-btn: 1.2rem;
+//$background-color-1: #0b1315;
+$background-color-1: black;
+$background-color-2: #ddaa00;

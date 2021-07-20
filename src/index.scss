@@ -1,0 +1,16 @@
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  overflow-x: hidden;
+}
+ul{
+  padding: 0;
+}
+p{
+  margin: 0!important;
+}
+::-webkit-scrollbar {
+  width: 0;
+}

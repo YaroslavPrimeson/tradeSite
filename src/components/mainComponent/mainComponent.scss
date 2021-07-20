@@ -1,0 +1,8 @@
+.main-component__container{
+width: 65%;
+}
+@media (max-width: 1024px) {
+  .main-component__container{
+    width:100%;
+  }
+}
